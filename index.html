@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/application.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+     <h1 class="text-left">Shopping Cart</h1>
+
+     <div class="row">
+
+       <div class="col-12">
+
+         <table class="table table-responsive">
+
+             <tr>
+               <td class="name">Salmon</td>
+               <td class="price">$60.00</td>
+               <td class="quantity"> <label>QTY </label><input type="text" class="qty"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="subtotal">$60.00</td>
+             </tr>
+
+             <tr>
+               <td class="name">Tuna</td>
+               <td class="price">$50.00</td>
+               <td class="quantity"><label>QTY </label><input type="text" class="qty"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="subtotal">$50.00</td>
+             </tr>
+
+             <tr>
+               <td class="name">Carp</td>
+               <td class="price">$50.00</td>
+               <td class="quantity"><label>QTY </label><input type="text" class="qty"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="subtotal">$50.00</td>
+             </tr>
+
+             <tr>
+               <td class="name">Pork</td>
+               <td class="price">$50.00</td>
+               <td class="quantity"><label>QTY </label><input type="text" class="qty"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="subtotal">$50.00</td>
+             </tr>
+
+             <tr>
+               <td class="name">Beef</td>
+               <td class="price">$40.00</td>
+               <td class="quantity"><label>QTY </label><input type="text" class="qty"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="subtotal">$40.00</td>
+             </tr>
+
+             <tr>
+               <td class="name"><input type="text"></td>
+               <td class="price"><input type="text"></td>
+               <td class="create"><button type="create" value="cancel">Create</button></td>
+               <td></td>
+             </tr>
+
+         </table>
+
+      <div class="text-right">
+        <button type ="button" class ="btn btn-success" id ="calculate">Calculate Prices</button>
+      </div>
+
+
+
+         <div class="col-12 col-md-6">
+           <h2 style="font-size: 35px">Total price:</h2>
+           <h2 style="font-size: 35px">$550.00</h2>
+         </div>
+
+       </div>
+     </div>
+   </div>
+  </body>
+</html>
