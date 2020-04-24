@@ -17,3 +17,21 @@ h1 {
 #calculate {
   margin-right: 50px;
 }
+
+.quantity {
+  width : 30%;
+}
+
+.subtotal {
+  text-align: right;
+}
+
+#add {
+  padding: 5px 15px 4px;
+  border: solid black 0.5px;
+  margin-left: -10px;
+}
+
+#addStock input {
+  margin-right: 20px;
+}
