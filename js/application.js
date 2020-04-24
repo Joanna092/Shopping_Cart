@@ -30,16 +30,44 @@ var updateShoppingValue = function () {
 });
 
 var totalShoppingValue = newTotalValue.reduce(sum);
-$('#totalPrice').html(totalShoppingValue);
-
+    $('#totalPrice').html(totalShoppingValue);
   });
 }
 
 $(document).ready(function () {
   updateShoppingValue();
 
-  $('tr input').on('input', function () {
+
+$(document).on('click', '.cancel', function (event) {
+  $(this).closest('tr').remove();
+  updateShoppingValue();
+});
+
+var timeout;
+$(document).on('input', 'tr input', function () {
+  clearTimeout(timeout);
+  timeout = setTimeout(function () {
     updateShoppingValue();
+  }, 100);
+});
+
+  $('#addStock').on('submit', function (event) {
+    event.preventDefault();
+    var name = $(this).children('[name=name]').val();
+    var price = $(this).children('[name=price]').val();
+    var num = $(this).children('[name=num]').val();
+
+    $('table').append('<tr>' +
+  '<td class="name">' + name + '</td>' +
+  '<td class="price">' + price + '</td>' +
+  '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="' + num + '"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>' +
+  '<td class="subtotal"></td>' +
+'</tr>');
+
+updateShoppingValue();
+ $(this).children('[name=name]').val('');
+ $(this).children('[name=price]').val('');
+ $(this).children('[name=num]').val('');
   });
 
 });
