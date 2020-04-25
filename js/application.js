@@ -4,8 +4,12 @@ var updateSubtotalPrice = function(ele) {
     var itemQuantity = parseFloat($(ele).find('.quantity input').val());
 
     var subtotalPrice = itemPrice * itemQuantity;
-    $(ele).children('.subtotal').html('$' + subtotalPrice);
 
+    if (!itemQuantity) {
+        subtotalPrice = 0;
+    }
+
+    $(ele).children('.subtotal').html('$' + subtotalPrice);
     return subtotalPrice;
 }
 
@@ -61,8 +65,8 @@ $(document).ready(function() {
 
         $('table').append('<tr>' +
             '<td class="name">' + name + '</td>' +
-            '<td class="price">' + price + '</td>' +
-            '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="' + num + '"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>' +
+            '<td class="price">$' + price + '</td>' +
+            (!num ? '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="1"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>' : '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="' + num + '"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>') +
             '<td class="subtotal"></td>' +
             '</tr>');
 
