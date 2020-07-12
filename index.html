@@ -7,74 +7,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    
   </head>
   <body>
-
+    
     <div class="container">
-
-     <h1 class="text-left">Shopping Cart</h1>
+      
      <div class="row">
+     
+      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 border" id="newStock">
+        <a name="addNew"></a>
+         <div class="container2"> 
+              <form id="addStock">
+                <h2 style="text-align: center">New product</h2>
+                <div class="row">
+                  <div class="col-25">
+                    <label class="newlabel" for="fname">Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input class="newinput" type="text" id="fname" name="name" placeholder="Name of the product" required/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label class="newlabel" for="price">Price</label>
+                  </div>
+                  <div class="col-75">
+                    <input class="newinput" type="number" id="price" name="price" placeholder="Price of the product"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label class="newlabel" for="fquantity">Quantity</label>
+                  </div>
+                  <div class="col-75">
+                     <input class="newinput" type="number" id="fquantity" name="num"  placeholder="Quantity"/>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  
+                  <button class="btn btn-secondary btn-lg btn-block" id="add">Add to the shopping cart</button>
+                  <p id="to_board"><a class="visible-xs visible-sm" href="#goToCart">Go to the Shopping Cart</a></p>
+                  
 
-       <div class="col-12">
 
-         <table class="table table-responsive">
+                </div>
+              </form>
+           </div> 
+              
+
+            </div>
+           
+
+       <div class="col-xs-12 col-md-8">
+        <a name="goToCart"></a>
+        <div id="cardbox" class="border2">
+        <div class="box border paper">
+
+          <h1 class="text-left">Shopping Cart</h1>
+          
+          <div class="table-responsive">
+         <table class="table">
              <tr>
                <td class="name">Salmon</td>
                <td class="price">$60.00</td>
-               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="1"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="1"></input><button type="reset" value="cancel" class="cancel">Remove</button></td>
                <td class="subtotal"></td>
              </tr>
 
              <tr>
                <td class="name">Tuna</td>
                <td class="price">$50.00</td>
-               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="3"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="3"><button type="reset" value="cancel" class="cancel">Remove</button></td>
                <td class="subtotal"></td>
              </tr>
 
              <tr>
                <td class="name">Carp</td>
                <td class="price">$50.00</td>
-               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="2"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="2"><button type="reset" value="cancel" class="cancel">Remove</button></td>
                <td class="subtotal"></td>
              </tr>
 
              <tr>
                <td class="name">Pork</td>
                <td class="price">$50.00</td>
-               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="2"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="2"><button type="reset" value="cancel" class="cancel">Remove</button></td>
                <td class="subtotal"></td>
              </tr>
 
              <tr>
                <td class="name">Beef</td>
                <td class="price">$40.00</td>
-               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="4"><button type="reset" value="cancel" class="cancel">Cancel</button></td>
+               <td class="quantity"><label>QTY </label><input type="number" class="qty" value="4"><button type="reset" value="cancel" class="cancel">Remove</button></td>
                <td class="subtotal"></td>
              </tr>
+
          </table>
+        </div>
+         <h2 class="totalPrice" style="font-size: 35px">Total price: $<span id="totalPrice"></span></h2>
+         <p id="new_product"><a class="visible-xs visible-sm" href="#addNew">Add new product</a></p>
 
-         <form class="col-12" id="addStock">
-                  <input name="name" type="text" placeholder="Name" required/>
-                  <input name="price" type="number" placeholder="Price"/>
-                  <input name="num" type="number" placeholder="Quantity"/>
-                  <button class="btn" id="add">add</button>
-                </form>
 
-         <div class="col-12 col-md-6">
-           <h2 style="font-size: 35px">Total price:</h2>
-           <h2 style="font-size: 35px">$<span id="totalPrice"></span></h2>
          </div>
 
-          </div>
+</div>
+</div> 
 
-     </div>
-   </div>
+
+
+
+
+         
+</div>
+</div>
+     
+   
   </body>
 </html>

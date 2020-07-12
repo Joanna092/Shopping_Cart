@@ -59,21 +59,21 @@ $(document).ready(function() {
 
     $('#addStock').on('submit', function(event) {
         event.preventDefault();
-        var name = $(this).children('[name=name]').val();
-        var price = $(this).children('[name=price]').val();
-        var num = $(this).children('[name=num]').val();
+        var name = $(this).find('[name=name]').val();  
+        var price = $(this).find('[name=price]').val();
+        var num = $(this).find('[name=num]').val();
 
         $('table').append('<tr>' +
             '<td class="name">' + name + '</td>' +
             '<td class="price">$' + price + '</td>' +
-            (!num ? '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="1"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>' : '<td class="quantity"><label>QTY </label><input type="text" class="qty" value="' + num + '"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>') +
+            (!num ? '<td class="quantity"><label>QTY </label><input type="number" class="qty" value="1"></input><button type="reset" value="cancel" class="cancel">Cancel</button></td>' : '<td class="quantity"><label>QTY </label><input type="number" class="qty" value="' + num + '"></input><button type="reset" value="cancel" class="cancel">Remove</button></td>') +
             '<td class="subtotal"></td>' +
             '</tr>');
 
         updateShoppingValue();
-        $(this).children('[name=name]').val('');
-        $(this).children('[name=price]').val('');
-        $(this).children('[name=num]').val('');
+        $(this).find('[name=name]').val('');    
+        $(this).find('[name=price]').val('');
+        $(this).find('[name=num]').val('');
     });
 
 });
