@@ -1,2 +1,2 @@
-# Shopping_Cart
-Assignment of Altcademy 
+See website live:
+https://tender-carson-434273.netlify.app/
